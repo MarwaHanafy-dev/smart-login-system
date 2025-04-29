@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب جديد</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-white">
+    <div class="py-5">
+        <div class="w-75 p-5 m-auto text-center form-container">
+            <h2 class="text-info mb-4">إنشاء حساب جديد</h2>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="usernameInput" placeholder="أدخل اسمك" required>
+                <p id="usernameAlert" class="d-none text-danger">يجب أن يحتوي الاسم على 3 أحرف على الأقل</p>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" id="userEmailInput" placeholder="أدخل بريدك الإلكتروني" required>
+                <p id="userEmailAlert" class="d-none text-danger">يجب إدخال بريد إلكتروني صحيح (مثال: name@example.com)</p>
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" id="userPasswordInput" placeholder="أدخل كلمة المرور" required>
+                <p id="userPasswordAlert" class="d-none text-danger m-0">كلمة المرور يجب أن تحتوي على 8 أحرف على الأقل، حرف كبير، حرف صغير، رقم ورمز خاص</p>
+            </div>
+            <p class="text-success d-none" id="confirmMsg">تم إنشاء الحساب بنجاح!</p>
+            <p class="text-danger d-none mb-0" id="accountExistMsg">هذا الحساب موجود بالفعل!</p>
+            <p class="text-danger d-none mb-0" id="tryAgainMsg">فشل إنشاء الحساب، الرجاء المحاولة مرة أخرى</p>
+            <button id="signupBtn" class="btn btn-outline-info w-100 mb-3 mt-4">إنشاء حساب</button>
+            <p class="text-white d-block">لديك حساب بالفعل؟ <a href="index.html" class="text-white text-decoration-none">تسجيل الدخول</a></p>
+            <a href="index.html" class="d-none btn btn-outline-success text-white w-25 m-auto" id="signin">تسجيل الدخول</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
